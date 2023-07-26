@@ -20,14 +20,14 @@ body {
     padding: 5rem;
 }
 
-header {
+.desktop_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-nav a{
+.desktop_nav a{
     text-decoration: none;
     color: var(--DarkGrayishBlue);
     font-weight: 700;
@@ -45,7 +45,7 @@ nav a{
     grid-column: span 2;
 }
 
-.mobile_img {
+.mobile_img, .mobile_nav, .mobile_header {
     display: none;
 }
 
@@ -172,6 +172,55 @@ nav a:hover {
 @media screen and (max-width: 480px) {
     body {
         padding: 1rem;
+    }
+
+    .desktop_header {
+        display: none;
+    }
+
+    .mobile_header {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    #btn_open {
+        display: block;
+        background-color: #fff;
+        border: none;
+    }
+
+    .mobile_nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 35%;
+        background-color: #fff;
+        height: 100%;
+        width: 75%;
+        padding: 20px;
+    }
+
+    .mobile_nav #btn_close {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 60px;
+        background-color: #fff;
+        border: none;
+    }
+
+    .mobile_nav li {
+        list-style: none;
+        margin-top: 20px;
+    }
+
+    .mobile_nav a {
+        text-decoration: none;
+        color: var(--VeryDarkBlue);
+        font-size: 1.3rem;
+        padding-bottom: 15px;
+        font-weight: 400;
     }
 
     .desktop_img {
